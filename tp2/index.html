@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario carga de datos</title>
+</head>
+
+<body>
+    <h1>Formulario carga de datos</h1>
+    <form>
+        <label for="apellido">Apellido<input type="text" id="apellido"></label>
+        <label for="nombre">Nombre<input type="text" id="nombre"></label>
+        <br><br>
+        <label for="ndni">Numero DNI<input type="number" id="ndni"></label>
+        <label for="fecha_na">Fecha de nacimiento<input type="date" id="fecha_na"></label>
+        <br><br>
+        <label for="domicilio">Domicilio<input type="text" id="domicilio"></label>
+        <label for="localidad">Localidad<input type="text" id="localidad"></label>
+        <br><br>
+        <h2>Idiomas que conoces</h2>
+        <label for="idioma1">Inglés<input type="checkbox" id="idioma1"></label>
+        <label for="barra_idioma1">Nivel de conocimiento <input type="range" id="barra_idioma1" min="0" max="100"
+                step="50" value="0"></label>
+        <output id="barra_idioma_out_1">0%</output>
+        <br><br>
+        <label for="idioma2">Francés<input type="checkbox" id="idioma2"></label>
+        <label for="barra_idioma2">Nivel de conocimiento <input type="range" id="barra_idioma2" min="0" max="100"
+                step="50" value="0"></label>
+        <output id="barra_idioma_out_2">0%</output>
+        <br><br>
+        <label for="idioma3">Español<input type="checkbox" id="idioma3"></label>
+        <label for="barra_idioma3">Nivel de conocimiento <input type="range" id="barra_idioma3" min="0" max="100"
+                step="50" value="0"></label>
+        <output id="barra_idioma_out_3">0%</output>
+        <br><br>
+        <label for="idioma4">Chino<input type="checkbox" id="idioma4"></label>
+        <label for="barra_idioma4">Nivel de conocimiento <input type="range" id="barra_idioma4" min="0" max="100"
+                step="50" value="0"></label>
+        <output id="barra_idioma_out_4">0%</output>
+        <br><br><br>
+        <button type="button" onclick="mostrarDatos()">Enviar y Mostrar</button>
+        <button type="reset">Borrar</button>
+    </form>
+    <script>
+        const barra_idioma1 = document.getElementById("barra_idioma1");
+        const barra_idioma_out_1 = document.getElementById("barra_idioma_out_1");
+
+        barra_idioma1.addEventListener("input", () => {
+            barra_idioma_out_1.textContent = barra_idioma1.value + "%";
+        })
+        const barra_idioma2 = document.getElementById("barra_idioma2");
+        const barra_idioma_out_2 = document.getElementById("barra_idioma_out_2");
+
+        barra_idioma2.addEventListener("input", () => {
+            barra_idioma_out_2.textContent = barra_idioma2.value + "%";
+        })
+        const barra_idioma3 = document.getElementById("barra_idioma3");
+        const barra_idioma_out_3 = document.getElementById("barra_idioma_out_3");
+
+        barra_idioma3.addEventListener("input", () => {
+            barra_idioma_out_3.textContent = barra_idioma3.value + "%";
+        })
+        const barra_idioma4 = document.getElementById("barra_idioma4");
+        const barra_idioma_out_4 = document.getElementById("barra_idioma_out_4");
+
+        barra_idioma4.addEventListener("input", () => {
+            barra_idioma_out_4.textContent = barra_idioma4.value + "%";
+        })
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
